@@ -25,6 +25,14 @@ head(activity)
 ## What is mean total number of steps taken per day?
 
 
+```r
+StepsTotal <- aggregate(steps ~ date, data = activity, sum, na.rm = TRUE)
+
+hist(StepsTotal$steps, main = "Total steps by day", xlab = "day", col = "red")
+```
+
+![](./PA1_template_files/figure-html/unnamed-chunk-2-1.png) 
+
 
 ## What is the average daily activity pattern?
 
