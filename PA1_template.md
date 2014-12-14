@@ -26,12 +26,28 @@ head(activity)
 
 
 ```r
-StepsTotal <- aggregate(steps ~ date, data = activity, sum, na.rm = TRUE)
+TotalSteps <- aggregate(steps ~ date, data = activity, sum, na.rm = TRUE)
 
-hist(StepsTotal$steps, main = "Total steps by day", xlab = "day", col = "red")
+hist(TotalSteps$steps, main = "total number of steps taken each day", xlab = "day")
 ```
 
 ![](./PA1_template_files/figure-html/unnamed-chunk-2-1.png) 
+
+```r
+mean(TotalSteps$steps)
+```
+
+```
+## [1] 10766.19
+```
+
+```r
+median(TotalSteps$steps)
+```
+
+```
+## [1] 10765
+```
 
 
 ## What is the average daily activity pattern?
